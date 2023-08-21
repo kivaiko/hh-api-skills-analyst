@@ -15,7 +15,14 @@ headers = {
     'Content-Type': 'application/json'
 }
 
-link = f'https://api.hh.ru/vacancies?text=Name%3A%28python+or+django+or+drf+or+backend+or+fastapi+or+flask%29+and+DESCRIPTION%3A%28django+or+drf+or+fastapi+or+flask%29+NOT+%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80+NOT+Senior+not+%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C+NOT+TechLead+NOT+%D1%82%D0%B5%D1%85%D0%BB%D0%B8%D0%B4&per_page=100'
+
+search_url = 'https://hh.ru/search/vacancy?employment=part&experience=between3And6&search_field=name&search_field=company_name&search_field=description&text=python+backend&ored_clusters=true&enable_snippets=true&L_save_area=true'
+
+
+def get_link(url):
+    url = url[29:]
+    link = f'https://api.hh.ru/vacancies?{url}&per_page=100'
+    return link
 
 
 def get_vacancies_id(url):
@@ -61,8 +68,11 @@ def clean(txt):
     return words_list
 
 
+link = get_link(search_url)
 vacancies_ids = get_vacancies_id(link)
 keywords = get_keywords(vacancies_ids)
+skills = get_skills(vacancies_ids)
+
 
 print(Counter(keywords).most_common(100))
 
