@@ -10,7 +10,7 @@ from conf import HEADERS
 """ Поисковы запрос на HH.Важно! Иногда hh добавляет в запрос параметр "&salary=",
 нужно убрать его иначе api не будет отдавать данные
 """
-search_url = 'https://hh.ru/search/vacancy?text=frontend&ored_clusters=true&enable_snippets=true&area=2758&hhtmFrom=vacancy_search_list'
+search_url = 'https://hh.ru/search/vacancy?text=Name%3A%28python+or+django+or+drf+or+backend+or+fastapi+or+flask%29+and+DESCRIPTION%3A%28django+or+drf+or+fastapi+or+flask%29+NOT+%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D1%80+NOT+Senior+not+%D0%9F%D1%80%D0%B5%D0%BF%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B5%D0%BB%D1%8C+NOT+TechLead+NOT+%D1%82%D0%B5%D1%85%D0%BB%D0%B8%D0%B4'
 
 
 """ Сколько оставь слов в итоговой выборке """
