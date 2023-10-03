@@ -27,6 +27,6 @@ source venv/bin/activate
 ```
 pip install -r requirements.txt
 ```
-Зарегистрируйте приложение на HeadHuner. (модерация скорее всего займет несколько дней)
+Зарегистрируйте приложение на [HeadHunter](https://dev.hh.ru/?utm_source=hh.ru&utm_medium=referral&utm_campaign=from_footer_new).
 
 Добавьте в файл `conf.py` данные о своем приложении
