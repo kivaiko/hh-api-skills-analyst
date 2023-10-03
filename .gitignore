@@ -2,4 +2,4 @@
 venv
 __pycache__/
 .idea
-conf.py
+conf
